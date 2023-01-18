@@ -7,11 +7,10 @@ function App() {
     let newTime = new Date().toLocaleTimeString();
     setState(newTime);
   }
-
+  setInterval(updateTime, 1000);
   return (
     <div className="container">
       <h1>{state}</h1>
-      <button onClick={updateTime}>Get Time</button>
     </div>
   );
 }
